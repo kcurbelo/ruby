@@ -1,59 +1,48 @@
 ##Create an Empty class named 'Person'
+class Person 
 
-
-
-
-
-
+end
 
 
 
 ##Define three properties on that class 'name','age','birthdate'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class Person 
+    def name 
+    end
+    def age 
+    end
+    def birthdate
+    end
+end
 
 
 
 ##Define 'methods' that allow you to access and set all three of those properties, Do not use attribute accessor
 =begin
 
-
-
-
-
-
-
-
-
-
 =end
+
+class Person 
+    def name (name)
+      @name = name
+    end
+    def age (age)
+      @age = age
+    end
+    def birthdate (birthdate)
+      @birthdate = birthdate
+    end
+end
+
 
 
 
 ##Explain what calling Person.new does
 =begin
 
-
-
-
-
-
-
+It will call the class. 
 
 =end
 
@@ -62,17 +51,44 @@
 
 ##Create an initializer method that allows you do Person.new 'Amy Smith' , which initializes the  Person's name property
 
+  class Person 
+      def initialize(name)
+        @name = name
 
+      end
+      def name 
+        @name 
+      end
 
+  end
 
-
-
+p = Person.new("Amy Smith")
+p.name
 
 
 
 
 
 ##Write a method that outputs the value of the self keyword to the console
+
+
+
+  class Person 
+      def initialize(name)
+        @name = name
+        puts "SELF IS:"
+        puts self
+      end
+      def name 
+        @name 
+         puts "SELF IS:"
+        puts self       
+      end
+
+  end
+
+p = Person.new("Amy Smith")
+p.name
 
 
 
@@ -89,11 +105,21 @@
 
 
 
+Self is refering to the class it is a part of, in this case the Person class. We could do 
+
+        def initialize(name)
+        @name = name
+        puts "SELF IS:"
+        puts self
+      end
+      def name 
+        @name 
+         puts "SELF IS:"
+        puts self       
+      end
 
 
-
-
-
+      And it will return the same "#<person:..."
 
 
 
